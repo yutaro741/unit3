@@ -15,15 +15,15 @@ class converter(MDApp):
     def set_counter(self):
         get = self.root.ids.user_start_x.text
         get = get.replace(" ", "")
-        if get.isdecimal and get != "":
+        if get.isdecimal and get != "": #Until here removing strings.
             amount_set = float(get)
             if self.current == "USD":
-                self.money = 1.09*amount_set
+                self.money = 1.09*amount_set #1.09 is the rate between USA and EUR
             else:
-                self.money = 141.34*amount_set
+                self.money = 141.34*amount_set #141.34 is the rate between JPY and EUR
             self.money = ('{:.02f}'.format(self.money))
             self.root.ids.dol_label.text = f"{self.money} {self.current}"
-        else:
+        else: #if its not number, say it here.
             self.root.ids.dol_label.text = f"Please enter number"
 
     def change_current(self, name):
