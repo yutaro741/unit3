@@ -98,5 +98,46 @@ Traceback (most recent call last):
     raise TypeError("input must be 1~3999")
 TypeError: input must be 1~3999
 
+```
 
+And this is the results.
+
+```.py
+#I realized that I have the test now.
+from quiz34 import to_roman
+
+import pytest
+
+def test_to_roman():
+    assert to_roman(1) == 'I'
+    assert to_roman(4) == 'IV'
+    assert to_roman(9) == 'IX'
+    assert to_roman(37) == 'XXXVII'
+    assert to_roman(44) == 'XLIV'
+    assert to_roman(50) == 'L'
+    assert to_roman(99) == 'XCIX'
+    assert to_roman(100) == 'C'
+    assert to_roman(77) == 'LXXVII'
+    assert to_roman(93) == 'XCIII'
+
+
+def test_to_roman_exceptions():
+    # check that the program raises a ValueError. This program can do with 1~3999, so I changed to 4000 instead of 101.
+    with pytest.raises(ValueError):
+        to_roman(4000)
+```
+```.py
+/Users/yuyu/PycharmProjects/unit3/venv/bin/python /private/var/folders/dt/_jx_m4cn6nn8f5btht6cclwh0000gn/T/AppTranslocation/6AB0605A-4C57-4376-AF28-17871DE968A3/d/PyCharm.app/Contents/plugins/python/helpers/pycharm/_jb_pytest_runner.py --path /Users/yuyu/PycharmProjects/unit3/quiz34test.py 
+Testing started at 15:08 ...
+Launching pytest with arguments /Users/yuyu/PycharmProjects/unit3/quiz34test.py --no-header --no-summary -q in /Users/yuyu/PycharmProjects/unit3
+
+============================= test session starts ==============================
+collecting ... collected 2 items
+
+quiz34test.py::test_to_roman PASSED                                      [ 50%]
+quiz34test.py::test_to_roman_exceptions PASSED                           [100%]
+
+============================== 2 passed in 0.03s ===============================
+
+プロセスは終了コード 0 で終了しました
 ```
