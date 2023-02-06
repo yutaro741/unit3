@@ -62,10 +62,10 @@ Launching pytest with arguments /Users/yuyu/PycharmProjects/unit3/quiz37test.py 
 ============================= test session starts ==============================
 collecting ... collected 4 items
 
-quiz37test.py::test_calculate_interest PASS                            [ 25%]
-quiz37test.py::test_principal_validation PASS                          [ 50%]
-quiz37test.py::test_rate_validation PASS                               [ 75%]
-quiz37test.py::test_years_validation PASS                              [100%]
+quiz37test.py::test_calculate_interest PASSED                            [ 25%]
+quiz37test.py::test_principal_validation PASSED                          [ 50%]
+quiz37test.py::test_rate_validation PASSED                               [ 75%]
+quiz37test.py::test_years_validation PASSED                              [100%]
 
 
 ============================== 4 passed in 0.03s ===============================
