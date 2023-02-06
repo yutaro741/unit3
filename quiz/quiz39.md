@@ -7,7 +7,7 @@ class quiz39(MDApp):
         self.count = 0
         super().__init__(**kwargs)
 
-    def add(self):
+    def add(self): #Code to add number.
         self.count += 1
         self.root.ids.counting.text = f"Count {self.count}"
 
