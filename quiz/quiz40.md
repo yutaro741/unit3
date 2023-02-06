@@ -8,13 +8,13 @@ class quiz40kv(MDApp):
         self.black = 0
         super().__init__(**kwargs)
 
-    def change_color(self):
+    def change_color(self): #Getting dark mode
         if self.root.ids.button.text == "Dark mode":
             self.root.ids.title.color = "#FFFFFF"
             self.root.ids.main_box.md_bg_color = "#000000"
             self.root.ids.button.text = "Light mode"
             self.root.ids.button.md_bg_color = "red"
-        else:
+        else: #Getting white mode
             self.root.ids.title.color = "#000000"
             self.root.ids.main_box.md_bg_color = "#FFFFFF"
             self.root.ids.button.text = "Dark mode"
