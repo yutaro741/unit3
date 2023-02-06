@@ -20,11 +20,11 @@ class city:
         return f"[City Object] City {self.name} is located at {self.location}"
 
     def distance(self, cityB):
-        # if isinstance(cityB, city):
-        xa, ya = self.location.x, self.location.y
-        xb, yb = cityB.location.x, cityB.location.y
-        # else:
-        #     raise TypeError("Input should be an object of the class city")
+        if isinstance(cityB, city):
+            xa, ya = self.location.x, self.location.y
+            xb, yb = cityB.location.x, cityB.location.y
+        else:
+            raise TypeError("Input should be an object of the class city")
         d = ((xa-xb)**2 + (ya-yb)**2)**(1/2)
         return d
 
