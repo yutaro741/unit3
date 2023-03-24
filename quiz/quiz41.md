@@ -430,4 +430,20 @@ This is spetial move. This takes precedence over the above conditions and this c
 --Photos omitted.
 
 ④If two corners facing each other have been chosen together and others are not filled; pick random corner.
+![](https://github.com/yutaro741/unit3/blob/main/pictures/Screen%20Shot%202023-03-25%20at%202.43.25.png)
+Best hand button will move as following. After that, Opponents need to choose A2(1), so I can choose B2 to do double reach.
+![](https://github.com/yutaro741/unit3/blob/main/pictures/Screen%20Shot%202023-03-25%20at%202.43.35.png)
 
+⑤If two corners not facing each other have been chosen together and others are not filled; pick grid that is next to my grid, and not next to opponent's grid.
+![](https://github.com/yutaro741/unit3/blob/main/pictures/Screen%20Shot%202023-03-25%20at%202.49.09.png)
+Best hand button will move as following. After that, opponents need to choose C1(6), so I can choose center to double reach.
+![](https://github.com/yutaro741/unit3/blob/main/pictures/Screen%20Shot%202023-03-25%20at%202.49.15.png)
+
+⑥If edge is choosen by me and corner that not next to each other is selected by opponents and others are not filled; Choose corner that is next to my grid and being same column or row with opponents.
+![](https://github.com/yutaro741/unit3/blob/main/pictures/Screen%20Shot%202023-03-25%20at%202.52.04.png)
+Best hand button will move as following. After that, situation will be same as ⑤.
+![](https://github.com/yutaro741/unit3/blob/main/pictures/Screen%20Shot%202023-03-25%20at%202.52.13.png)
+
+
+
+This is all for my program. If you have any sujjestion, please let me know.
