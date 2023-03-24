@@ -203,7 +203,7 @@ If reset button is pressed, everything will be reseted.
 
 ## Advanced things-The best move
 Those things are the basic things that is requred in the quiz. I did some of the advanced things, that do the best move in each situation. 
-The below is the python code.
+The below is the python code. As this is basically a first-move=winner game, we have not designed the programme so that the later player wins, but no matter what move the earlier player makes, the later player will not lose if this programme is used.
 Because I am used to Japanese English, "One more to go" is expressed as "reach".
 ```.py
     def AIhand(self):
@@ -378,16 +378,56 @@ Because I am used to Japanese English, "One more to go" is expressed as "reach".
         return random.choice(empty)
 ```
 
-Basic move-In order of priority.
+## Basic move-In order of priority.
+This is basic move part. When the board is not in any of the special states described below, things proceed in the following order of priority.
+
 ①If I am reaching, program will just go to win.
 ![](https://github.com/yutaro741/unit3/blob/main/pictures/Screen%20Shot%202023-03-25%20at%202.18.43.png)
 Best hand button will move as following.
 ![](https://github.com/yutaro741/unit3/blob/main/pictures/Screen%20Shot%202023-03-25%20at%202.18.53.png)
 
 ②If opponent are reaching program will just go to block.
+
 --Photos omitted.
 
 ③If I am able to let double reach, just do that.
 ![](https://github.com/yutaro741/unit3/blob/main/pictures/Screen%20Shot%202023-03-25%20at%202.22.55.png)
 Best hand button will move as following. There is double reach(bottom row and diagonal) so you can defenetly win in next turn.
 ![](https://github.com/yutaro741/unit3/blob/main/pictures/Screen%20Shot%202023-03-25%20at%202.23.22.png)
+
+④If opponent has option to do double reach, let it impossible.
+![](https://github.com/yutaro741/unit3/blob/main/pictures/Screen%20Shot%202023-03-25%20at%202.30.29.png)
+Best hand button will move as following. If yellow fills 8(c3), that makes double reach. So, fill that place.
+![](https://github.com/yutaro741/unit3/blob/main/pictures/Screen%20Shot%202023-03-25%20at%202.30.37.png)
+
+⑤Fill center
+
+--Photos omitted.
+
+⑥Do reach
+
+--Photos omitted.
+
+⑦Select random place
+
+--Photos omitted.
+
+
+
+## Spetial move-In order of priority.
+This is spetial move. This takes precedence over the above conditions and this condition will always result in the following movements.
+
+①If there is nothing, fill the center.
+
+--Photos omitted.
+
+②If only center is filled, pick random edge.(not corner)
+
+--Photos omitted.
+
+③If I filled the center, opponent filled corner, and others are not filled; pick random edge(not corner)
+
+--Photos omitted.
+
+④If two corners facing each other have been chosen together and others are not filled; pick random corner.
+
